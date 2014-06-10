@@ -28,17 +28,6 @@ if [[ $1 == "configure" ]]; then
 	ldconfig
 	initctl reload-configuration
 
-	useradd -G www-data xbian
-
-	chown -R xbian:www-data /var/www/rutorrent
-	chmod -R 770 /var/www/rutorrent
-
-	ln -s /etc/nginx/sites-available/rutorrent /etc/nginx/sites-enabled/rutorrent
-
-	sed -i 's/;env\[PATH\]/env\[PATH\]/g' /etc/php5/fpm/pool.d/www.conf
-
-	service php5-fpm restart
-	service nginx restart
 	service rtorrent start
 
 fi

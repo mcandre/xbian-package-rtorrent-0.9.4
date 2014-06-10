@@ -57,13 +57,7 @@ am__aclocal_m4_deps = $(top_srcdir)/scripts/attributes.m4 \
 	$(top_srcdir)/scripts/ax_pthread.m4 \
 	$(top_srcdir)/scripts/ax_with_curses.m4 \
 	$(top_srcdir)/scripts/checks.m4 \
-	$(top_srcdir)/scripts/common.m4 \
-	$(top_srcdir)/scripts/libtool.m4 \
-	$(top_srcdir)/scripts/ltoptions.m4 \
-	$(top_srcdir)/scripts/ltsugar.m4 \
-	$(top_srcdir)/scripts/ltversion.m4 \
-	$(top_srcdir)/scripts/lt~obsolete.m4 \
-	$(top_srcdir)/configure.ac
+	$(top_srcdir)/scripts/common.m4 $(top_srcdir)/configure.ac
 am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
@@ -78,12 +72,12 @@ am__can_run_installinfo = \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
-ACLOCAL = ${SHELL} /home/xbian/rtorrent-0.9.4/missing --run aclocal-1.11
+ACLOCAL = ${SHELL} /home/xbian/igit/rtorrent/missing --run aclocal-1.11
 AMTAR = $${TAR-tar}
 AR = ar
-AUTOCONF = ${SHELL} /home/xbian/rtorrent-0.9.4/missing --run autoconf
-AUTOHEADER = ${SHELL} /home/xbian/rtorrent-0.9.4/missing --run autoheader
-AUTOMAKE = ${SHELL} /home/xbian/rtorrent-0.9.4/missing --run automake-1.11
+AUTOCONF = ${SHELL} /home/xbian/igit/rtorrent/missing --run autoconf
+AUTOHEADER = ${SHELL} /home/xbian/igit/rtorrent/missing --run autoheader
+AUTOMAKE = ${SHELL} /home/xbian/igit/rtorrent/missing --run automake-1.11
 AWK = mawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
@@ -124,7 +118,7 @@ LIBTOOL = $(SHELL) $(top_builddir)/libtool
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
-MAKEINFO = ${SHELL} /home/xbian/rtorrent-0.9.4/missing --run makeinfo
+MAKEINFO = ${SHELL} /home/xbian/igit/rtorrent/missing --run makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -153,10 +147,10 @@ SET_MAKE =
 SHELL = /bin/bash
 STRIP = strip
 VERSION = 0.9.4
-abs_builddir = /home/xbian/rtorrent-0.9.4/doc
-abs_srcdir = /home/xbian/rtorrent-0.9.4/doc
-abs_top_builddir = /home/xbian/rtorrent-0.9.4
-abs_top_srcdir = /home/xbian/rtorrent-0.9.4
+abs_builddir = /home/xbian/igit/rtorrent/doc
+abs_srcdir = /home/xbian/igit/rtorrent/doc
+abs_top_builddir = /home/xbian/igit/rtorrent
+abs_top_srcdir = /home/xbian/igit/rtorrent
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -187,7 +181,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /home/xbian/rtorrent-0.9.4/install-sh
+install_sh = ${SHELL} /home/xbian/igit/rtorrent/install-sh
 libcurl_CFLAGS = -I/usr/local/include  
 libcurl_LIBS = -L/usr/local/lib -lcurl  
 libdir = ${exec_prefix}/lib
