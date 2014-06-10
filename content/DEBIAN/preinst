@@ -1,0 +1,11 @@
+#!/bin/bash
+
+if [ $1 == "install" -o $1 == "upgrade" ]; then
+
+        if [ -f "/etc/init/rtorrent.conf" ]; then
+                service rtorrent stop &>/dev/null;
+	else
+		true
+	fi
+
+fi

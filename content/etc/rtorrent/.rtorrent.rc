@@ -1,0 +1,27 @@
+min_peers = 2
+max_peers = 35
+min_peers_seed = 2
+max_peers_seed = 35
+max_uploads = 3
+#download_rate = 4000
+#upload_rate = 300
+#max_downloads_div = 0
+#max_uploads_global = 70
+#max_downloads_global = 70
+directory = /home/xbian/downloads
+session = /home/xbian/rtorrent
+schedule = untied_directory,5,5,stop_untied=
+schedule = watch_directory,5,5,load_start=/home/xbian/torrents/*.torrent      
+schedule = low_diskspace,5,60,close_low_diskspace=100M
+port_range = 51515-51515
+network.scgi.open_port = 127.0.0.1:5000
+encoding_list = UTF-8
+system.umask.set = 022
+port_random = no
+check_hash = no
+encryption = allow_incoming, try_outgoing, enable_retry
+trackers.enable = 1
+use_udp_trackers = yes
+dht = auto
+dht_port = 6881
+peer_exchange = yes

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+if [ "$1" == "remove" ] || [ "$1" == "purge" ]; then
+
+
+# removing config files should be performed only if user requested purge
+
+	if [ "$1" == "purge" ]; then
+
+		rm -fr /etc/rtorrent
+                #rm -f /etc/default/rtorrent
+	fi
+
+	true
+
+fi

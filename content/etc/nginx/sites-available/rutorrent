@@ -1,0 +1,35 @@
+server {
+
+ listen 9096; # A vous de choisir !
+
+ root /var/www/rutorrent;
+
+ index index.html;
+
+ server_name rutorrent;
+
+ error_log /var/log/nginx/rutorrent_error.log;
+
+ access_log /var/log/nginx/rutorrent_access.log;
+
+ auth_basic "Restricted";
+
+ auth_basic_user_file /var/www/rutorrent/.htpasswd;
+
+location ~ .php$ {
+    fastcgi_index   index.php;
+    #fastcgi_pass    127.0.0.1:9000;
+    fastcgi_pass    unix:/var/run/php5-fpm.sock;
+    include         fastcgi_params;
+    fastcgi_param   SCRIPT_FILENAME    $document_root$fastcgi_script_name;
+    fastcgi_param   SCRIPT_NAME        $fastcgi_script_name;
+ }
+
+location /RPC2 {
+
+ scgi_pass localhost:5000;
+ include scgi_params;
+
+ }
+
+}

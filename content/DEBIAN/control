@@ -1,0 +1,10 @@
+Origin: XBian
+Package: xbian-package-rtorrent
+Version: 0.9.4
+Section: net
+Priority: optional
+Architecture: armhf
+Depends: xbian-update, php5-fpm, nginx, dtach, php5-cli, unrar
+Conflicts: 
+Maintainer: koper89
+Description: rtorrent 0.9.4 compiled, patched and configured for XBian
